@@ -15,5 +15,20 @@ public class Student
     {
         Grades.AddRange(grades);
     }
+    // first git commit and push completed
 
+    public double CalculateAverageGrade() //created a double type method with no parameters
+    {
+        if (Grades.Count == null) //if statement accounts for no grades = 0
+        {
+            return 0;
+        }
+        else
+        {
+            return Grades.Average(); //else statement returns the average when grades are given
+        }
+     // second git commit and push completed
+        
+        
+    }
 }
