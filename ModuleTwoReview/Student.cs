@@ -2,9 +2,9 @@
 
 public class Student
 {
-    public string Name { get; set; }
-    public int ID { get; set; }
-    public List<double> Grades { get; set; }  =  new List<double>();//created the 3 parameters
+    public string Name { get; set; } = "";
+    public int ID { get; set; } = 0;
+    public List<double> Grades { get; set; }  = [];//created the 3 parameters
 
     public void AddGrade(double grade) //created the first method
     {
@@ -19,14 +19,15 @@ public class Student
 
     public double CalculateAverageGrade() //created a double type method with no parameters
     {
-        if (Grades.Count == null) //if statement accounts for no grades = 0
+        if (Grades.Count == 0) //if statement accounts for no grades = 0
         {
             return 0;
         }
-        else
-        {
-            return Grades.Average(); //else statement returns the average when grades are given
-        }
+        double total = Grades.Any() ? Grades.Average() : 0;
+        return total;
+        //{
+            //return Grades.Average(); //else statement returns the average when grades are given
+        //}
      // second git commit and push completed
         
         
